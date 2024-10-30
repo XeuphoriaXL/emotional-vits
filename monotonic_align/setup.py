@@ -6,4 +6,5 @@ setup(
     name='monotonic_align',
     ext_modules=cythonize("core.pyx", language_level="3"),
     include_dirs=[numpy.get_include()],
+    script_args=["build_ext", "--inplace"]
 )
